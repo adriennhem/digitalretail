@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'store/index'
 
   resources :products
-
+  # Support stripe payments through charges
+  resources :charges
   root 'store#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

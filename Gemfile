@@ -10,6 +10,13 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
+
+# Added figaro gem for securely managing credentials
+gem 'figaro'
+
+# Use stripe gem for ecommerce 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem 'paperclip', github: 'thoughtbot/paperclip'
