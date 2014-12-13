@@ -1,0 +1,21 @@
+<h1>The Homepage</h1>
+
+<%= link_to 'Add a product', products_path %>
+
+<% cache ['store', Product.latest] do %>
+
+	<% @products.each do |product| %>
+
+		<% cache ['entry', product] do %>
+		<div class="panel panel-default">
+		<%= link_to product_path(product) do %>
+		<%= image_tag(product.image :thumb) %>
+		<% end %>
+			<div class="panel-body">
+				<%= product.title %> <br>
+				<%= number_to_currency(product.price, unit: "£") %>
+			</div>
+		</div>
+		<% end %>
+	<% end %>
+<% end %>
