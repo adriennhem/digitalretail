@@ -1,4 +1,6 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <h2>Your Cart</h2>
 <ul>
@@ -6,3 +8,8 @@
 		<li><%= item.quantity %> &times; <%= item.product.title %></li>
 		<% end %>
 </ul>
+
+<%= number_to_currency(@cart.total_price, unit: '£') %>
+
+
+<%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?'} %>
