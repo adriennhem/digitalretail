@@ -18,7 +18,9 @@ gem 'figaro'
 # Use stripe gem for ecommerce 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+
 # gem 'therubyracer',  platforms: :ruby
+# Use papeclip for pictures upload
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'bootstrap-sass', '~> 3.2.0' 
 # Use jquery as the JavaScript library
@@ -30,23 +32,24 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+
+# Use for development
+gem 'sqlite3', group: [:development, :test]
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# Use for production
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
+<<<<<<< HEAD
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production 
 gem 'rails_12factor', group: :production
+=======
+>>>>>>> 445f328
 
 
